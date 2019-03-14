@@ -8,23 +8,23 @@
 public class DatabaseItem
 {
     private String[] listitem;
-    private Item item;
+    public Item ItemDB;
         
     public boolean addItem(Item item)
     {
-       this.item = item;
+       this.ItemDB = item;
        return true;
     }
     
     public boolean removeItem(Item item)
     {
-       this.item = item;
+       this.ItemDB = item;
        return true;
     }
     
     public Item getItem()
     {
-       return item;
+       return ItemDB;
     }
     
     public String[] getItemDatabase()

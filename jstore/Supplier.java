@@ -1,6 +1,6 @@
 
 /**
- * class Supplier to for the supplier's data.
+ * class Supplier to for the .
  *
  * @author Abby Savero
  * @version 7/3/19
@@ -58,7 +58,7 @@ public class Supplier
     {
         this.name = name;
     }
-    
+
     public void setEmail(String email)
     {
         this.email = email;
@@ -76,5 +76,11 @@ public class Supplier
     
     public void printData()
     {
+        System.out.println("\n======== SUPPLIER ========");
+		System.out.println("ID: " + id);
+		System.out.println("Name: " + name);
+		System.out.println("Email: " + email);
+		System.out.println("Phone Number: " + phoneNumber);
+		System.out.println("Location: " + location);
     }
 }

@@ -11,6 +11,8 @@ public class Invoice
     private Item item;
     private String date;
     private int totalPrice;
+    private int totalItem;
+    private InvoiceStatus status;
 
    
     public Invoice(int id, Item item, String date, int totalPrice)
@@ -42,6 +44,16 @@ public class Invoice
         return totalPrice;
     }
     
+    public int getTotalItem()
+    {
+        return totalItem;
+    }
+    
+    public InvoiceStatus getInvoiceStatus()
+    {
+        return status;
+    }
+    
     public void setId(int id)
     {
         this.id = id;
@@ -63,7 +75,23 @@ public class Invoice
         this.totalPrice = totalPrice;
     }
     
+    public void setTotalItem(int totalItem)
+    {
+        this.totalItem = totalItem;
+    }
+    
+     public void setInvoiceStatus(InvoiceStatus status)
+    {
+        this.status = status;
+    }
+    
     public void printData()
     {
+        System.out.println("\n========INVOICE========");
+		System.out.println("ID: " + id);
+		System.out.println("Date: " + date);
+		System.out.println("Item: " + item.getName());
+		System.out.println("Total Price: " + totalPrice);
+		System.out.println("Status: " + status);
     }
 }

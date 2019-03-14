@@ -11,12 +11,13 @@ public class Item
     private String name;
     private int stock;
     private int price;
-    private String category;
+    private ItemCategory category;
+    private ItemStatus status;
     private Supplier supplier;
 
     
     public Item(int id, String name, int stock, int price, 
-    String category, Supplier supplier)
+    ItemStatus status, Supplier supplier, ItemCategory category)
     {
         this.id = id;
         this.name = name;
@@ -48,9 +49,14 @@ public class Item
         return price;
     }
     
-    public String getCategory()
+    public ItemCategory getCategory()
     {
         return category;
+    }
+    
+    public ItemStatus getStatus()
+    {
+        return status;
     }
     
     public Supplier getSupplier()
@@ -78,9 +84,14 @@ public class Item
         this.price = price;
     }
     
-    public void setCategory(String cateogry)
+    public void setCategory(ItemCategory category)
     {
         this.category = category;
+    }
+    
+    public void setStatus(ItemStatus status)
+    {
+        this.status = status;
     }
     
     public void setSupplier(Supplier supplier)
@@ -90,5 +101,12 @@ public class Item
     
     public void printData()
     {
+        System.out.println("\n======== ITEM ========");
+		System.out.println("ID: " + id);
+		System.out.println("Name: " + name);
+		System.out.println("Category: " + category);
+		System.out.println("Status: " + status);
+		System.out.println("Supplier: " + supplier.getName());
+        
     }
 }
