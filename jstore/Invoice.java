@@ -7,15 +7,17 @@
  */
 public class Invoice
 {
-    private int id;
-    private Item item;
-    private String date;
-    private int totalPrice;
-    private int totalItem;
-    private InvoiceStatus status;
+    private static int id;
+    private static Item item;
+    private static String date;
+    protected static int totalPrice;
+    private static int totalItem;
+    private static InvoiceStatus status;
+    private static InvoiceType type;
 
    
-    public Invoice(int id, Item item, String date, int totalPrice)
+    public Invoice(int id, Item item, String date, int totalItem,
+    int totalPrice)
     {
         this.id = id;
         this.item = item;
@@ -24,34 +26,41 @@ public class Invoice
     }
 
     
-    public int getId()
+    public static int getId()
     {
         return id;
     }
     
-    public Item getItem()
+    public static Item getItem()
     {
         return item;
     }
     
-    public String getDate()
+    public static String getDate()
     {
         return date;
     }
     
-    public int getTotalPrice()
+    public static int getTotalPrice()
     {
         return totalPrice;
     }
     
-    public int getTotalItem()
+    public static int getTotalItem()
     {
         return totalItem;
     }
     
-    public InvoiceStatus getInvoiceStatus()
+    public static InvoiceStatus getInvoiceStatus()
     {
+        // put your code here
         return status;
+    }
+    
+    public static InvoiceType getInvoiceType()
+    {
+        
+        return type;
     }
     
     public void setId(int id)
@@ -85,7 +94,7 @@ public class Invoice
         this.status = status;
     }
     
-    public void printData()
+    public static void  printData()
     {
         System.out.println("\n========INVOICE========");
 		System.out.println("ID: " + id);

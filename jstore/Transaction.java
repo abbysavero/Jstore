@@ -14,67 +14,73 @@ public class Transaction
     /**
      * Constructor for objects of class Transaction
      */
-    public void orderNewItem(Supplier supplier)
+    public void orderNewItem(Item item)
     {
-        Item thing = new Item (1, "game", 3, 765, 
-        ItemStatus.valueOf("New"), 
-        supplier, ItemCategory.valueOf("Electronics"));
-        
-        DatabaseItem.addItem(thing);
         
         String date = new SimpleDateFormat("dd-MM-yyyy").format(new Date());
+        Invoice order1 = new Invoice(1, item, date, 10, item.getPrice); 
         
-        Invoice order1 = new Invoice (1, thing, date, thing.getPrice());
+        if (order1 instanceof Sell_Paid == true)
+        {
+            System.out.println("Benar Invoice Type adalah Sell_Paid");
+        }
+        else
+        {
+            System.out.println("Salah Invoice Type bukan Sell _Paid");
+        }
+    
+            
         
         thing.setStatus(ItemStatus.valueOf("New"));
         
-        order1.setInvoiceStatus(InvoiceStatus.valueOf("Paid"));
         
-        thing.printData();
+        
+        item.printData();
         order1.printData();   
               
         
     }
 
     
-    public void orderSecondItem(Supplier supplier)
+    public void orderSecondItem(Item item)
     {
-        Item thing = new Item (1, "game", 3, 765, 
-        ItemStatus.valueOf("New"), 
-        supplier, ItemCategory.valueOf("Electronics"));
         
-        DatabaseItem.addItem(thing);
+        
+       
+        
         
         String date = new SimpleDateFormat("dd-MM-yyyy").format(new Date());
+        Invoice order1 = new Invoice(1, item, date, 10, item.getPrice); 
         
-        Invoice order1 = new Invoice (1, thing, date, thing.getPrice());
-        
-        thing.setStatus(ItemStatus.valueOf("Second"));
-        
-        order1.setInvoiceStatus(InvoiceStatus.valueOf("Paid"));
-        
-        thing.printData();
-        order1.printData(); 
-        
+        if (order1 instanceof Sell_Paid == true)
+        {
+            System.out.println("Benar Invoice Type adalah Sell_Paid");
+        }
+        else
+        {
+            System.out.println("Salah Invoice Type bukan Sell _Paid");
+        }
+    
     }
     
-    public void orderRefurbishedItem(Supplier supplier)
+    public void orderRefurbishedItem(Item item)
     {
-        Item thing = new Item (1, "game", 3, 765, 
-        ItemStatus.valueOf("New"), 
-        supplier, ItemCategory.valueOf("Electronics"));
-        
-        DatabaseItem.addItem(thing);
         
         String date = new SimpleDateFormat("dd-MM-yyyy").format(new Date());
+        Invoice order1 = new Invoice(1, item, date, 10, item.getPrice()); 
         
-        Invoice order1 = new Invoice (1, thing, date, thing.getPrice());
+        if (order1 instanceof Sell_Paid == true)
+        {
+            System.out.println("Benar Invoice Type adalah Sell_Paid");
+        }
+        else
+        {
+            System.out.println("Salah Invoice Type bukan Sell _Paid");
+        }
+    
         
-        thing.setStatus(ItemStatus.valueOf("Refurbished"));
         
-        order1.setInvoiceStatus(InvoiceStatus.valueOf("Paid"));
-        
-        thing.printData();
+        item.printData();
         order1.printData(); 
         
     }
@@ -83,9 +89,9 @@ public class Transaction
     {
      String date = new SimpleDateFormat("dd-MM-yyyy").format(new Date());
      
-     Invoice order1 = new Invoice (1, item, date, item.getPrice());
      
-     order1.setInvoiceStatus(InvoiceStatus.valueOf("Paid"));
+     
+     
      item.setStatus(ItemStatus.valueOf("Sold"));
      
      order1.printData();
@@ -100,9 +106,9 @@ public class Transaction
     {
      String date = new SimpleDateFormat("dd-MM-yyyy").format(new Date());
      
-     Invoice order1 = new Invoice (1, item, date, item.getPrice());
      
-     order1.setInvoiceStatus(InvoiceStatus.valueOf("Unpaid"));
+     
+     
      item.setStatus(ItemStatus.valueOf("Sold"));
      
      order1.printData();
@@ -112,9 +118,9 @@ public class Transaction
     {
      String date = new SimpleDateFormat("dd-MM-yyyy").format(new Date());
      
-     Invoice order1 = new Invoice (1, item, date, item.getPrice());
      
-     order1.setInvoiceStatus(InvoiceStatus.valueOf("Installment"));
+     
+     
      item.setStatus(ItemStatus.valueOf("Sold"));
      
      order1.printData();

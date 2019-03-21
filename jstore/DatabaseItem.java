@@ -7,27 +7,27 @@
  */
 public class DatabaseItem
 {
-    private String[] listitem;
-    public Item ItemDB;
+    private static String[] listitem;
+    public static Item ItemDB;
         
-    public boolean addItem(Item item)
+    public static boolean addItem(Item item)
     {
-       this.ItemDB = item;
+       ItemDB = item;
        return true;
     }
     
-    public boolean removeItem(Item item)
+    public static boolean removeItem(Item item)
     {
-       this.ItemDB = item;
+       ItemDB = item;
        return true;
     }
     
-    public Item getItem()
+    public static Item getItem()
     {
        return ItemDB;
     }
     
-    public String[] getItemDatabase()
+    public static String[] getItemDatabase()
     {
        return listitem;
     }
