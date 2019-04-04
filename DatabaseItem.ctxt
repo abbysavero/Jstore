@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=DatabaseItem
+comment0.text=\r\n\ Class\ DatabaseItem\ to\ keep\ track\ of\ jstore's\ items\r\n\r\n\ @author\ Abby\ Savero\r\n\ @version\ 7/3/19\r\n
+comment1.params=item
+comment1.target=boolean\ addItem(Item)
+comment2.params=item
+comment2.target=boolean\ removeItem(Item)
+comment3.params=
+comment3.target=Item\ getItem()
+comment4.params=
+comment4.target=java.lang.String[]\ getItemDatabase()
+numComments=5
