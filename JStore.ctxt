@@ -1,8 +1,0 @@
-#BlueJ class context
-comment0.target=JStore
-comment0.text=\r\n\ Jstore\ class\ which\ acts\ as\ main.\r\n\r\n\ @author\ Abby\ Savero\r\n\ @version\ 7/3/19\r\n
-comment1.params=
-comment1.target=JStore()
-comment2.params=args
-comment2.target=void\ main(java.lang.String[])
-numComments=3
